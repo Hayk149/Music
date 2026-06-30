@@ -1,4 +1,5 @@
 import TrackCard from "./components/TrackCard";
+import styles from "./page.module.css"
 
 interface Track {
   trackId: number
@@ -20,12 +21,12 @@ export default async function Home() {
     const data: ApiResponse = await response.json()
 
   return (
-    <main>
-      <h1>Muusic Explorer</h1>
-      <p>
+    <main className={styles.main}>
+      <h1 className={styles.title}>Muusic Explorer</h1>
+      <p className={styles.subtitle}>
         Треков найдено {data.resultCount}:
       </p>
-      <ul>
+      <ul className={styles.list}>
         {data.results.map((track) => (
           <li key={track.trackId}>
             <TrackCard 
