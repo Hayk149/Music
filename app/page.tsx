@@ -30,6 +30,7 @@ export default async function Home() {
         {data.results.map((track) => (
           <li key={track.trackId}>
             <TrackCard 
+              trackId={track.trackId}
               trackName={track.trackName}
               artistName={track.artistName}
               artWorkUrl={track.artworkUrl100}
