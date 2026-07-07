@@ -3,7 +3,7 @@ import styles from "./TrackCard.module.css"
 import Link from "next/link";
 
 interface TrackCardProps {
-  trackId: string
+  trackId: number
   trackName: string
   artistName: string
   artWorkUrl: string
