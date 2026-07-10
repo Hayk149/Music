@@ -1,0 +1,38 @@
+.wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px 0
+}
+
+.image {
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.flex {
+    display: flex;
+    justify-content: center;
+    gap:  50px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.title {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.trackname {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.artistname {
+  color: #777;
+  font-size: 14px;
+}
