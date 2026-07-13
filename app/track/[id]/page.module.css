@@ -33,6 +33,33 @@
 }
 
 .artistname {
-  color: #646363;
-  font-size: 14px;
+  color: #bb2caf;
+  font-size: 16px;
 }
+
+.link {
+    margin-top: auto;
+}
+
+.button {
+    border: solid 2px transparent;
+    background-color: #bb2caf;
+    padding: 12px 12px;
+    font-size: large;
+    border-radius: 10px;
+    width: 100%;
+    cursor: pointer;
+    justify-content: end;
+}
+
+.button:hover {
+    border: solid 2px #bb2caf;
+    background-color: transparent;
+    color: #bb2caf;
+    padding: 12px 12px;
+    font-size: large;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+

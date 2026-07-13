@@ -11,7 +11,7 @@ interface TrackCardProps {
 
 export default function TrackCard({trackId, trackName, artistName, artWorkUrl}:TrackCardProps) {
     return (
-      <Link rel="stylesheet" href={`/track/${trackId}`} style={{ textDecoration: "none", color: "inherit" }}>
+      <Link href={`/track/${trackId}`} style={{ textDecoration: "none", color: "inherit" }}>
         <div className={styles.card}>
                 <div className={styles.wrapper}>
                   <Image className={styles.image} src={artWorkUrl} alt={trackName} width={100} height={100} />

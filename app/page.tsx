@@ -1,13 +1,6 @@
-import TrackCard from "./components/TrackCard";
 import styles from "./page.module.css"
-
-interface Track {
-  trackId: number
-  trackName: string
-  artistName: string
-  artworkUrl100: string
-  previewUrl: string
-}
+import TrackList from "./components/TrackList";
+import {Track} from "./types"
 
 interface ApiResponse {
   resultCount: number
@@ -22,21 +15,12 @@ export default async function Home() {
 
   return (
     <main className={styles.main}>
-      <h1 className={styles.title}>Muusic Explorer</h1>
+
+      <h1 className={styles.title}>Music Explorer</h1>
       <p className={styles.subtitle}>
         Треков найдено {data.resultCount}:
       </p>
-      <ul className={styles.list}>
-        {data.results.map((track) => (
-          <li key={track.trackId}>
-            <TrackCard 
-              trackId={track.trackId}
-              trackName={track.trackName}
-              artistName={track.artistName}
-              artWorkUrl={track.artworkUrl100}
-            />
-        </li>)) }
-      </ul>
+      <TrackList data={data}/>
     </main>
   );
 }

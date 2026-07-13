@@ -1,4 +1,5 @@
 import styles from './page.module.css'
+import Link from "next/link";
  
 interface TrackPageProps {
   params: Promise<{
@@ -43,6 +44,11 @@ export default async function TrackPage({params}: TrackPageProps) {
                 <p>цена альбома {track.collectionPrice}</p>
                 <p>цена трека {track.trackPrice}</p>
                 <p>жанр трека {track.primaryGenreName}</p>
+                <Link rel="stylesheet" href={'/'} className={styles.link}>
+                  <button className={styles.button}>
+                    Назад к трекам
+                  </button>
+                </Link>
             </div>
         </div>
       </main>
